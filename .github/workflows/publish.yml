@@ -2,6 +2,11 @@ name: Publish in DockerHub
 
 on:  
   workflow_dispatch:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "src/**"
+      - "pom.xml"
 
 jobs:
   publish:
